@@ -59,6 +59,6 @@ input {
 }
 #buttonGroup {
     position: absolute;
-    bottom: 25px;
-    right: 25px;
+    bottom: 5%;
+    right: 5%;
 }
