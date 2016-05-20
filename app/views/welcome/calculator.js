@@ -3,6 +3,7 @@ var numOfActs=0;
 
 
 function calculatePercent(actClass){
+    console.log(actClass);
     var x = document.getElementsByClassName(actClass)[0].value;
     var y = document.getElementsByClassName(actClass)[1].value;
     var total = (x/y)*100;
@@ -62,4 +63,58 @@ function calculateAvg(){
     }
     document.getElementById("result").innerHTML = (nume*100/denom).toFixed(2) + "%";
     
+}
+function addRow(){
+    var table = document.getElementById("actTable");
+    var nextAct = table.rows.length -1;
+    var row = table.insertRow(nextAct);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    cell1.innerHTML = "Activity " + nextAct;
+    cell2.innerHTML = "A"+nextAct;
+    var x = document.createElement("input");
+    // <input type="number" name="A4x" class="act4" onkeyup="calculatePercent(this)"/>
+    x.type = "number";
+    x.name = "A"+nextAct+"x";
+    x.className = "act"+nextAct;
+    // x.value = "";
+    x.setAttribute("onkeyup","calculatePercent(this.className)" );
+    // x.onkeypress = function(){
+    //     ineedhelp("lololol");
+    // }
+    // console.log(x);
+    // x.keyup = ineedhelp(x.className);
+    // x.addEventListener("keyup", calculatePercent(x.className),false);
+    // x.onkeypress = function() {alert('testing'); };
+    console.log(x);
+    
+    var t = document.createElement("input");
+    t.type = "number";
+    t.name = "A"+nextAct+"t";
+    t.className = "act"+nextAct;
+    t.setAttribute("onkeyup","calculatePercent(this.className)" );
+    // t.value =;
+    // t.onkeyup = calculatePercent(t);
+    // t.addEventListener("onkeyup", calculatePercent(this.className));
+    // t.addEventListener("keyup", calculatePercent(t.className),false);
+    // t.addEventListener("onkeyup", calculatePercent(),true);
+    // t.addEventListener("onkeyup", function(){
+    //     calculatePercent(t.className);
+    // });
+    // t.onkeyup = calculatePercent();
+    // t.onkeyup = ineedhelp();
+    cell3.appendChild(x);
+    
+    
+    // console.log(cell3.innerHTML);
+    cell3.innerHTML = cell3.innerHTML + ' / ';
+    cell3.appendChild(t);
+
+    console.log(cell3.innerHTML);
+    
+    var p = document.createElement("p");
+    p.className = "act"+nextAct;
+    cell4.appendChild(p);
 }
