@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-  # root 'welcome#index'
+  get 'calculator/calculator'
+
+  # get 'welcome/calculator'
+
+  root 'calculator#calculator'
   # root :to => 'public#calculator' 
   
-  get 'welcome/calculator'
+  # get 'welcome/calculator'
+  # root 'welcome#calculator'
   #resources :things
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

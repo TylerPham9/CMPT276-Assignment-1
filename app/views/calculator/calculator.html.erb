@@ -1,0 +1,109 @@
+
+<html>
+  <head>
+    <title>Grade Calculator</title>
+<%= stylesheet_link_tag "calculator", media: "all" %>
+<%= javascript_include_tag "calculator" %>
+  </head>
+
+  <body>
+    
+    <!--<script src="./app/assets/javascripts/calculator.js"></script>-->
+    
+    <div id ="main">
+      <h1>Grade Calculator</h1>
+      <div id = "mainBody">
+        <h3>Activities</h3>
+        <p> Give grades to the numeric activities:</p>
+        <form id="calcForm">
+        <table id = "actTable">
+          <tr>
+            <td>Name</td>
+            <td>Short Name</td>
+            <td>Grade</td>
+            <td>Percentage</td>
+          </tr>
+         
+          <tr>
+            <td>Activity 1</td>
+            <td>A1</td>
+            <td>
+              <input type="number" name="A1x" class="act1" onkeyup="calculatePercent(this.className)"/>
+              /
+              <input type="number" name="A1t" class="act1" onkeyup="calculatePercent(this.className)"/>
+            </td>
+            <td>
+              <p class= "act1"></p>
+            </td>
+          </tr>
+         
+          <tr>
+            <td>Activity 2</td>
+            <td>A2</td>
+            <td>
+              <input type="number" name="A2x" class="act2" onkeyup="calculatePercent(this.className)"/>
+              /
+              <input type="number" name="A2t" class="act2" onkeyup="calculatePercent(this.className)"/>
+            </td>
+            <td>
+              <p class="act2"></p>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>Activity 3</td>
+            <td>A3</td>
+            <td>
+              <input type="number" name="A3x" class="act3" onkeyup="calculatePercent(this.className)"/>
+              /
+              <input type="number" name="A3t" class="act3" onkeyup="calculatePercent(this.className)"/>
+            </td>
+            <td>
+              <p class="act3"></p>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>Activity 4</td>
+            <td>A4</td>
+            <td>
+              <input type="number" name="A4x" class="act4" onkeyup="calculatePercent(this.className)"/>
+              /
+              <input type="number" name="A4t" class="act4" onkeyup="calculatePercent(this.className)"/>
+            </td>
+            <td>
+              <p class="act4"></p>
+            </td>
+          </tr>
+          <tr>
+            <td><b>TOTAL</b></td>
+            <td>
+              
+            </td>
+            <td></td>
+            <td>
+              <p id = "result"></p>
+            </td>
+          </tr>
+          
+        </table>
+        </form>
+        <div id="buttonGroup">
+          <button class="buttons" id="addButton" onclick="addRow()">ADD</button>
+          <button class="buttons" id="avgButton" onclick="calculateAvg()">AVERAGE</button>
+          <button class="buttons" id="meanButton" onclick ="calculateMean()">MEAN</button>
+        </div>
+        <!--<div class= "buttons" id="avgButton">-->
+        <!--  <p>AVERAGE</p>-->
+        <!--</div>-->
+        <!--<div class= "buttons" id="meanButton">-->
+        <!--  <p>MEAN</p>-->
+        <!--</div>-->
+      </div>
+      
+    </div>
+   
+
+  </body>
+</html>  
+ 
