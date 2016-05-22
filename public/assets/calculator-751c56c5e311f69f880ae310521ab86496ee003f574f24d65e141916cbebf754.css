@@ -8,9 +8,9 @@ html {
     background-color: #ffffff;
     margin-left: 5%;
     margin-right: auto;
-    width: 90%;
-    margin-top: 2.5%;
-    margin-bottom: auto;
+    width: 80%;
+    /*margin-left: 10px;*/
+    /*margin-right: 10px;*/
     padding: 20px 20px 20px 20px;
 }
 #mainBody {
