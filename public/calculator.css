@@ -1,33 +1,38 @@
-html {
-    margin: 0;
-    padding: 0;
-    background-color: #a61b2d;
-}
+/*html {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+
+/*}*/
 
 #header, #footer {
     height: 30px;
     background-color: #a61b2d;
     box-shadow: inset 0px 0px 10px #000;
-    
 }
-
+body {
+    background-color: #a61b2d;
+}
 #main {
-    padding:20 20 20 20;
+    padding: 20px 20px 20px 20px;
+    /*padding-left: 20px;*/
+    /*padding-top: 20px*/
     width: 90%;
     position: relative;
+    /*background-color:white;*/
 }
 
 #wrapper {
     background-color:white;
-    position:relative;
+    /*position:relative;*/
 /*    width: 90%;*/
     /*margin: 0 auto 0 5%;*/
+    /*height:100vh;*/
     margin-left: 5%;
     margin-right:5%;
 }
 
 #mainBody {
-   
+    width:80%;
     position: relative;
     background-color: #e9eef0;
     padding: 20px 20px 20px 20px;
@@ -39,7 +44,7 @@ html {
 table {
     table-layout: fixed;
     border-collapse: collapse;
-    width: 90%;
+    width: 80%;
     bottom: 5%;
     /*float: left;*/
     display:block;
@@ -51,7 +56,7 @@ table td {
     height: 30px;
 }
 form {
-    padding-bottom:100; 
+    padding-bottom: 5em; 
 }
 
 input {
@@ -74,8 +79,8 @@ input {
 #buttonGroup {
     display: block;
     position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 10 10 10 10;
+    bottom: 0px;
+    right: 0px;
+    margin: 10px 10px 10px 10px;
 }
 

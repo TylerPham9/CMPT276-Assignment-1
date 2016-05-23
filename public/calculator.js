@@ -3,11 +3,14 @@ var numOfActs=0;
 
 
 function calculatePercent(actClass){
-    console.log(actClass);
+    // console.log(actClass);
+    // Look at the first 2 values of the class, if set up properly, it should be the 2 values
     var x = document.getElementsByClassName(actClass)[0].value;
     var y = document.getElementsByClassName(actClass)[1].value;
     var total = (x/y)*100;
     // console.log(total);
+    
+    //Ignore values out of range
     if (total <= 150 && total >= 0){
         document.getElementsByClassName(actClass)[2].innerHTML = total.toFixed(2) + "%";
     } else {
@@ -19,16 +22,11 @@ function calculateMean(){
     var numOfValues = 0;
     var nume=0;
     var j,nume;
-    // var nume = document.getElementsByClassName('act'+i)[2].con;
-    // console.log(nume);
-    // for (i = 1; )
-    // if (document.getElementsByClassName('act'+i)[2].innerHTML == ''){
-    //     console.log("penis");
-    // } else {
-    //     console.log("testies");
-    // }
+    
+    //Determine the total number of activities
     numOfActs = document.getElementById("calcForm").length /2;
     
+    //Look at values calculated by calculatePercent function and keep the value parts
     for (i = 1; i <= numOfActs; i++){
         j = document.getElementsByClassName('act'+ i)[2];
         // console.log("innerHTML " + j.innerHTML);
@@ -39,7 +37,7 @@ function calculateMean(){
             numOfValues++;
         }
     }
-    console.log(nume/numOfValues);
+    // console.log(nume/numOfValues);
     document.getElementById("result").innerHTML = (nume/numOfValues).toFixed(2) + "%";
 
 }
@@ -65,6 +63,7 @@ function calculateAvg(){
     
 }
 function addRow(){
+    //Add a new row below the last activity and above the total row 
     var table = document.getElementById("actTable");
     var nextAct = table.rows.length -1;
     var row = table.insertRow(nextAct);
@@ -72,17 +71,18 @@ function addRow(){
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
     var cell4 = row.insertCell(3);
+    
     cell1.innerHTML = "Activity " + nextAct;
     cell2.innerHTML = "A"+nextAct;
+    //Set the type, name and class of the 2 inputs
     var x = document.createElement("input");
-    // <input type="number" name="A4x" class="act4" onkeyup="calculatePercent(this)"/>
     x.type = "number";
     x.name = "A"+nextAct+"x";
     x.className = "act"+nextAct;
     // x.value = "";
+    //Add the calculate function
     x.setAttribute("onkeyup","calculatePercent(this.className)" );
 
-    // console.log(x);
     
     var t = document.createElement("input");
     t.type = "number";
