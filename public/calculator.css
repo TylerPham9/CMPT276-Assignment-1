@@ -1,8 +1,11 @@
 html {
     margin: 0;
-    padding: 0;
+    padding: 100px 100px 100px 100px;
     background-color: #a61b2d;
     
+}
+body {
+    /*padding: 100px 100px 100px 100px;*/
 }
 #main {
     background-color: #ffffff;
@@ -11,7 +14,7 @@ html {
     width: 90%;
     /*margin-top: 2.5%;*/
     /*margin-bottom: auto;*/
-    margin: 2.5% auto auto 5%;
+    /*margin: 2.5% auto auto 5%;*/
     /*margin-left: 30px;*/
     padding: 20px 20px 20px 20px;
 }
