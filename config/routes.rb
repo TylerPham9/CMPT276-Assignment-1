@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  get 'calculator/calculator'
+  # get 'calculator/calculator'
 
   # get 'welcome/calculator'
 
-  root 'calculator#calculator'
-  # root :to => 'public#calculator' 
+  # root 'calculator#calculator'
+  root :to => 'welcome#calculator' 
   
   # get 'welcome/calculator'
   # root 'welcome#calculator'

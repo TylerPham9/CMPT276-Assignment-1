@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
-    def calculator
+    def index
+        render :file => 'public/calculator.html'
     end
 end
