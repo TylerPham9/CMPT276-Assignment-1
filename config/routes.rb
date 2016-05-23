@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # get 'welcome/calculator'
 
   # root 'calculator#calculator'
-  root :to => 'welcome#calculator' 
+  root :to => 'welcome#index' 
   
   # get 'welcome/calculator'
   # root 'welcome#calculator'
