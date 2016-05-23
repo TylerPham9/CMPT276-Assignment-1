@@ -16,6 +16,25 @@ function calculatePercent(actClass){
     } else {
         document.getElementsByClassName(actClass)[2].innerHTML = '';
     }
+    colorChange(total,document.getElementsByClassName(actClass)[2]);
+
+    
+}
+function colorChange (value,obj){
+    if (value <= 50) {
+       obj.style.color = "#FF0000"; 
+    } else if (value <= 60 ) {
+        obj.style.color = "#DD9900"; 
+    } else if (value <= 70 ) {
+        obj.style.color = "#DDDD00"; 
+    } else if (value <= 80 ) {
+        obj.style.color = "#AAEE00"; 
+    } else if (value <= 90 ) {
+        obj.style.color = "#55EE00"; 
+    } else {
+        obj.style.color = "#00EE00"; 
+    }
+  
 }
 function calculateMean(){
     var i = 1;
@@ -39,6 +58,7 @@ function calculateMean(){
     }
     // console.log(nume/numOfValues);
     document.getElementById("result").innerHTML = (nume/numOfValues).toFixed(2) + "%";
+    colorChange(nume/numOfValues,document.getElementById("result"));
 
 }
 
@@ -60,6 +80,7 @@ function calculateAvg(){
 
     }
     document.getElementById("result").innerHTML = (nume*100/denom).toFixed(2) + "%";
+    colorChange(nume*100/denom, document.getElementById("result"));
     
 }
 function addRow(){
