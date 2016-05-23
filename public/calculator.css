@@ -3,20 +3,46 @@ html {
     padding: 0;
     /*padding: 100px 100px 100px 100px;*/
     background-color: #a61b2d;
-    
 }
 
-#main {
-    background-color: #ffffff;
-    margin-left: 5%;
-    margin-right: auto;
+#wrapper {
     width: 90%;
-    margin-top: 2.5%;
-    margin-bottom: auto;
-    /*margin: 2.5% auto auto 5%;*/
+    margin: 0 auto 0 5%;
+    /*margin-left: 5%;*/
+    height: 100%;
+}
+
+#header, #footer {
+    display: block;
+    background-color:blue;
+    height: 5%;
+    position:relative;
+    
+}
+/*#footer;*/
+#footer {
+    /*position: fixed;*/
+    /*bottom: ;*/
+    /*position:absolute;*/
+    /*bottom:0;*/
+}
+#main {
+    /*display:block;*/
+    background-color: #ffffff;
+    /*margin-left: 5%;*/
+    /*margin-right: auto;*/
+    
+    /*margin-top: 2.5%;*/
+    /*margin-bottom: auto;*/
+    
     /*margin-left: 30px;*/
     padding: 20px 20px 20px 20px;
     float: left;
+}
+
+div {
+    /*position:relative;*/
+    /*display:block;*/
 }
 #mainBody {
     position: relative;
@@ -49,7 +75,7 @@ form {
 }
 
 input {
-    width:40%;
+    width: 40%;
 }
 .buttons {
 
@@ -58,10 +84,9 @@ input {
     border: none;
     color: #e9eef0;
     width: 80px;
-    height: 25px;
     border-radius: 3px;
     border: 1px solid #900;
-    text-align:center;
+    text-align: center;
     vertical-align: middle;
     height: 30px;
     
@@ -77,3 +102,4 @@ input {
 p {
     margin: 0;
 }
+
