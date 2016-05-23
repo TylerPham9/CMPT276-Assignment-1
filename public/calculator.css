@@ -1,30 +1,31 @@
 html {
     margin: 0;
-    padding: 100px 100px 100px 100px;
+    padding: 0;
+    /*padding: 100px 100px 100px 100px;*/
     background-color: #a61b2d;
     
 }
-body {
-    /*padding: 100px 100px 100px 100px;*/
-}
+
 #main {
     background-color: #ffffff;
-    /*margin-left: 5%;*/
-    /*margin-right: auto;*/
+    margin-left: 5%;
+    margin-right: auto;
     width: 90%;
-    /*margin-top: 2.5%;*/
-    /*margin-bottom: auto;*/
+    margin-top: 2.5%;
+    margin-bottom: auto;
     /*margin: 2.5% auto auto 5%;*/
     /*margin-left: 30px;*/
     padding: 20px 20px 20px 20px;
+    float: left;
 }
 #mainBody {
     position: relative;
     background-color: #e9eef0;
     width: 80%;
     margin: 10px 10px 10px 10px;
-    padding: 20px 20px 20px 20px;
-    height: 80%
+    padding: 20px 20px 100px 20px;
+    height: 80%;
+    float: left;
 } 
 
 #mainBody > h3 {
@@ -34,10 +35,13 @@ table {
     table-layout: fixed;
     border-collapse: collapse;
     width: 90%;
+    bottom: 5%;
+    float: left;
 }
 table td {
     border: 2px solid black;    
     width: 25%;
+    /*height: 40px;*/
 }
 form {
     padding-top: 10px;
@@ -63,7 +67,13 @@ input {
     
 }
 #buttonGroup {
+    display: block;
     position: absolute;
+    /*left: 1231;*/
     bottom: 5%;
-    right: 5%;
+    right: 50.0;
+}
+
+p {
+    margin: 0;
 }

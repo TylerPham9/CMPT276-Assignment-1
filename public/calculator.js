@@ -81,30 +81,15 @@ function addRow(){
     x.className = "act"+nextAct;
     // x.value = "";
     x.setAttribute("onkeyup","calculatePercent(this.className)" );
-    // x.onkeypress = function(){
-    //     ineedhelp("lololol");
-    // }
+
     // console.log(x);
-    // x.keyup = ineedhelp(x.className);
-    // x.addEventListener("keyup", calculatePercent(x.className),false);
-    // x.onkeypress = function() {alert('testing'); };
-    console.log(x);
     
     var t = document.createElement("input");
     t.type = "number";
     t.name = "A"+nextAct+"t";
     t.className = "act"+nextAct;
     t.setAttribute("onkeyup","calculatePercent(this.className)" );
-    // t.value =;
-    // t.onkeyup = calculatePercent(t);
-    // t.addEventListener("onkeyup", calculatePercent(this.className));
-    // t.addEventListener("keyup", calculatePercent(t.className),false);
-    // t.addEventListener("onkeyup", calculatePercent(),true);
-    // t.addEventListener("onkeyup", function(){
-    //     calculatePercent(t.className);
-    // });
-    // t.onkeyup = calculatePercent();
-    // t.onkeyup = ineedhelp();
+
     cell3.appendChild(x);
     
     
@@ -112,9 +97,14 @@ function addRow(){
     cell3.innerHTML = cell3.innerHTML + ' / ';
     cell3.appendChild(t);
 
-    console.log(cell3.innerHTML);
+    // console.log(cell3.innerHTML);
     
     var p = document.createElement("p");
     p.className = "act"+nextAct;
     cell4.appendChild(p);
+}
+
+function delRow(){
+    var table = document.getElementById("actTable");
+    table.deleteRow(table.rows.length-2);
 }
